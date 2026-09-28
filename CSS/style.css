@@ -1,0 +1,276 @@
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Navigation */
+
+nav {
+    background-color: #0f172a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h2 {
+    color: white;
+    font-size: 28px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* General Section Styling */
+
+section {
+    padding: 90px 60px;
+}
+
+
+/* About Section */
+
+#about {
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+#about h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Skills Section */
+
+#skills {
+    text-align: center;
+    background-color: #f8fafc;
+}
+
+#skills h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #0f172a;
+}
+
+#skills ul {
+    list-style: none;
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+#skills li {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#skills li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+}
+
+/* Education Section */
+
+#education {
+    background-color: #ffffff;
+}
+
+#education h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #0f172a;
+}
+
+#education h3 {
+    font-size: 23px;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+#education p {
+    font-size: 17px;
+    margin: 5px 0 30px;
+    color: #475569;
+}
+
+/* Projects Section */
+
+#projects {
+    text-align: center;
+    background-color: #f8fafc;
+}
+
+#projects h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #0f172a;
+}
+
+#projects h3 {
+    font-size: 28px;
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+
+#projects p {
+    max-width: 750px;
+    margin: 10px auto;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #475569;
+}
+
+/* Contact Section */
+
+#contact {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #0f172a;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#contact textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contact button {
+    padding: 13px 28px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Footer */
+
+footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+
+    nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav a {
+        margin: 8px 0;
+    }
+
+    /* Home */
+
+    #home h1 {
+        font-size: 38px;
+    }
+
+    #home h2 {
+        font-size: 20px;
+    }
+
+    #home p {
+        font-size: 16px;
+    }
+
+    /* Skills */
+
+    #skills ul {
+        grid-template-columns: 1fr;
+    }
+
+    /* Sections */
+
+    section {
+        padding: 60px 20px;
+    }
+}
