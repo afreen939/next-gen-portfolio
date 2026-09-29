@@ -1,0 +1,462 @@
+/* ================================
+   GLOBAL STYLES
+================================ */
+
+:root {
+    --primary: #6c63ff;
+    --primary-dark: #554ee6;
+    --dark: #151515;
+    --text: #555;
+    --light: #f7f7fb;
+    --white: #ffffff;
+    --border: #e5e5e5;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    padding: 90px 8%;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--dark);
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   HEADER & NAVIGATION
+================================ */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > a {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+nav div {
+    display: flex;
+    gap: 25px;
+}
+
+nav div a {
+    font-weight: 500;
+    color: var(--dark);
+    transition: 0.3s;
+}
+
+nav div a:hover {
+    color: var(--primary);
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+#home {
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7f7ff,
+            #ffffff
+        );
+}
+
+#home > p:first-child {
+    color: var(--primary);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#home h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1.1;
+    margin: 10px 0;
+}
+
+#home h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+#home p:nth-of-type(2) {
+    max-width: 650px;
+    font-size: 1.05rem;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+#home a {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 10px;
+    padding: 12px 22px;
+
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: var(--primary);
+    color: var(--white);
+
+    transition: 0.3s;
+}
+
+#home a:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+#home a:last-child {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+#home a:last-child:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+
+/* ================================
+   ABOUT SECTION
+================================ */
+
+#about {
+    max-width: 1200px;
+    margin: auto;
+}
+
+#about p {
+    max-width: 800px;
+}
+
+
+/* ================================
+   SKILLS SECTION
+================================ */
+
+#skills {
+    background-color: var(--light);
+}
+
+#skills > div {
+    max-width: 1200px;
+    margin: 30px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+#skills article {
+    background-color: var(--white);
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.3s;
+}
+
+#skills article:hover {
+    transform: translateY(-6px);
+}
+
+#skills h3 {
+    margin-bottom: 10px;
+}
+
+
+/* ================================
+   TABLES
+================================ */
+
+#education,
+#learning {
+    max-width: 1200px;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+caption {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+th,
+td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+tr:hover td {
+    background-color: #fafafa;
+}
+
+
+/* ================================
+   PROJECTS
+================================ */
+
+#projects {
+    background-color: var(--light);
+}
+
+#projects > div {
+    max-width: 1200px;
+    margin: 30px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+#projects article {
+    background-color: var(--white);
+    padding: 30px;
+
+    border-radius: 12px;
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+}
+
+#projects h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   CONTACT FORM
+================================ */
+
+#contact {
+    max-width: 900px;
+    margin: auto;
+}
+
+#contact form {
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contact form div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--dark);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    font: inherit;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary);
+}
+
+button {
+    width: fit-content;
+
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--primary);
+    color: var(--white);
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 30px 8%;
+    text-align: center;
+
+    background-color: var(--dark);
+    color: #ccc;
+}
+
+footer a {
+    color: var(--white);
+}
+
+footer a:hover {
+    color: var(--primary);
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav div {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    section {
+        padding: 70px 6%;
+    }
+
+    #home {
+        min-height: 80vh;
+    }
+
+    #skills > div {
+        grid-template-columns: 1fr;
+    }
+
+    #projects > div {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
+
+
+/* ================================
+   SMALL MOBILE SCREENS
+================================ */
+
+@media (max-width: 480px) {
+
+    #home h1 {
+        font-size: 2.8rem;
+    }
+
+    #home h2 {
+        font-size: 1.2rem;
+    }
+
+    #home a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+}
